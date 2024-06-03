@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: experiment-pod-case2
+spec:
+  containers:
+  - name: program-a
+    image: dockerfile_a:latest
+    imagePullPolicy: Never
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "500m"
+      limits:
+        memory: "2Gi" 
+        cpu: "1"
+  - name: program-b
+    image: dockerfile_b:latest
+    imagePullPolicy: Never
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "500m"
+      limits:
+        memory: "2Gi"
+        cpu: "1"
+  - name: program-c
+    image: dockerfile_c:latest
+    imagePullPolicy: Never
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "500m"
+      limits:
+        memory: "2Gi"
+        cpu: "1"
+  - name: program-d
+    image: dockerfile_dlatest
+    imagePullPolicy: Never
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "500m"
+      limits:
+        memory: "2Gi"
+        cpu: "1"
